@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<head>
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+
+  <title>
+    Binary Calculator
+  </title>
+</head>
+<html>
+  <body>
+
+  <img src = "goover.png" height = "92" width = "272" alt = Binary Calculator.>
+  <content-text>
+    <input id="text" class = "searchvalue" placeholder = "검색어 입력"></input>
+    
+
+    <select id = "ENGINE" class = "selectvalue">
+      <option value = "https://www.google.com/search?q=" selected = "GOOGLE">GOOGLE</option>
+      <option value = "https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&query=">NAVER</option>
+      <option value = "https://www.bing.com/search?q=">BING</option>
+      <option value = "https://www.youtube.com/results?search_query=">YOUTUBE</option>
+      <option value = "https://www.youtube.com/@">YT_CHANNEL</option>
+    </select>
+
+
+    <button onclick="search()" class = "search-button">검색</button>
+    
+  </content-text>
+  </body>
+</html>
+<!-- ======= -->
+<script>
+function say_hello() {
+  text = document.getElementById("text").value;
+}
+function ChangValue() {
+  var value_str = document.getElementById('select_value');
+  
+}
+function search() {
+ var link = document.getElementById('ENGINE').value;
+ link += document.getElementById("text").value; 
+ 
+ location.href = link;
+ location.replace(link);
+ window.open(link);
+}
+
+</script>
+<!-- ======= -->
+<style>
+  body {
+    width:100vw;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+content-text {
+  font-size: larger;
+}
+.searchvalue {
+  width: 300px;
+            padding: 10px;
+            box-shadow: 0px 1px 5px rgb(158, 158, 158);
+            border: none;
+            border-radius: 20px;  
+        
+}
+.search-button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .search-button:hover {
+            background-color: #0056b3;
+        }
+.selectvalue {
+  width: 150px;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+}
+</style>
